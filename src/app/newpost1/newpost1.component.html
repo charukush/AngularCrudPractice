@@ -1,0 +1,22 @@
+<p>newpost1 works!</p>
+<form [formGroup]="myForm">
+    <label>
+        ID:
+        <input type = "text" formControlName = "id">  
+    </label>
+    <label>
+        Name:
+        <input type = "text" formControlName = "name">  
+    </label>
+    <button (click) = "onSubmit()"> Submit</button>
+</form>
+<p>Content List</p>
+<ul>
+    <li *ngFor = "let row of contentList | async">
+        {{row.id}}
+        {{row.name}}
+        <button (click) = "onDelete(row.id)"> Delete</button>
+        <button (click) = "onUpdate(row.id,row.name)" > Edit</button>
+        
+    </li>
+</ul>

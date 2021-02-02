@@ -1,0 +1,16 @@
+<p>newpost works!</p>
+<p> Content New Post Form</p>
+<form [formGroup]="profileForm">
+    <label>
+        Post Id:
+        <input type = "text" formControlName= "id">
+    </label>
+    
+    <label>
+        Title:
+        <input type = "text" formControlName= "title">
+    </label>
+    
+    <button (click)="onsubmit()">Submit</button>
+</form>
+
